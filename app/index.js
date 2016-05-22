@@ -1,4 +1,5 @@
-function CountDown(obj) {
+const CountDown = function(obj) {
+    console.log(obj)
     CountDown.vars = {
         startTime: obj.startTime ? obj.startTime : (new Date()).getTime(),
         stopTime: obj.stopTime ? obj.stopTime : (new Date()).getTime(),
@@ -90,7 +91,7 @@ CountDown.timeGroup = function(key, time) {
                     time: time % formula
                 }
             },
-           M: function(time) {
+            M: function(time) {
                 var formula = 1000 * 60 * 60 * 24;
                 return {
                     data: Math.floor(time / CountDown.pseudoFactorial(n, 5)),
@@ -129,4 +130,4 @@ CountDown.timeGroup = function(key, time) {
     return data[key](time);
 };
 
-module.export = CountDown;
+module.exports = CountDown;
