@@ -88,46 +88,53 @@ CountDown.timeGroup = function(key, time) {
                 var formula = 1000 * 60 * 60 * 24;
                 return {
                     data: Math.floor(time / CountDown.pseudoFactorial(n, 6)),
-                    time: time % formula
+                    time: CountDown.leftpad(time % formula)
                 }
             },
             M: function(time) {
                 var formula = 1000 * 60 * 60 * 24;
                 return {
                     data: Math.floor(time / CountDown.pseudoFactorial(n, 5)),
-                    time: time % formula
+                    time: CountDown.leftpad(time % formula)
                 }
             },
             d: function(time) {
                 var formula = 1000 * 60 * 60 * 24;
                 return {
                     data: Math.floor(time / CountDown.pseudoFactorial(n, 4)),
-                    time: time % formula
+                    time: CountDown.leftpad(time % formula)
                 }
             },
             h: function(time) {
                 var formula = 1000 * 60 * 60;
                 return {
                     data: Math.floor(time / CountDown.pseudoFactorial(n, 3)),
-                    time: time % formula
+                    time: CountDown.leftpad(time % formula)
                 }
             },
             m: function(time) {
                 var formula = 1000 * 60;
                 return {
                     data: Math.floor(time / CountDown.pseudoFactorial(n, 2)),
-                    time: time % formula
+                    time: CountDown.leftpad(time % formula)
                 }
             },
             s: function(time) {
                 var formula = 1000;
                 return {
                     data: Math.floor(time / CountDown.pseudoFactorial(n, 1)),
-                    time: time % formula
+                    time: CountDown.leftpad(time % formula)
                 }
             }
         };
     return data[key](time);
 };
+
+CountDown.leftpad(num) {
+    if(num < 9) {
+        return '0' + num
+    }
+    return num
+}
 
 module.exports = CountDown;
