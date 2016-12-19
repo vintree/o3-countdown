@@ -1,4 +1,4 @@
-# 0.3.x
+# o3-countdown - 0.3.x
 
 o3-countdown是一个倒计时组件，具备以下功能
 
