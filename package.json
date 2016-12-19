@@ -1,8 +1,12 @@
 {
-  "name": "O2-countdown",
-  "version": "0.3.0",
+  "name": "o3-countdown",
+  "version": "0.3.1",
   "description": "O2-countdown",
-  "email": "puxiao.wh@hotmail.com",
+  "email": "puxiao.wh@gmail.com",
+  "repository": { 
+    "type" : "git", 
+    "url": "https://github.com/wuguzi/O2-countdown"    
+  },  
   "main": "index.js",
   "scripts": {
     "webpack-release": "webpack --config webpack.release.js -p",
