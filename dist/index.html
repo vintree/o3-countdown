@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
 <head>
-    <script src="../app/index.js"></script>
+    <script src="../app/_index.js"></script>
     <script src="./index.js"></script>
 </head>
 <body>
@@ -11,17 +11,57 @@
 </body>
 </html>
 <script>
-    var countDown = new CountDown({
-        startTime: (new Date(2016, 3, 13, 2, 11, 50)).getTime(),
-        stopTime: (new Date(2018, 3, 15, 2, 13, 0)).getTime(),
-        format: 'y-M-d',
-        every: function(data) {
+    // var countDown = new CountDown({
+    //     startTime: (new Date(2016, 3, 13, 2, 11, 50)).getTime(),
+    //     stopTime: (new Date(2018, 3, 15, 2, 13, 0)).getTime(),
+    //     format: 'y-M-d',
+    //     every: function(data) {
+    //         console.log(data);
+    //     },
+    //     stop: function(data) {
+    //         console.log('stop');
+    //     }
+    // }).start();
+    var countDowns = []
+    const countDown1 = CountDown({
+        startTime: (new Date()).getTime(),
+        stopTime: (new Date()).getTime() + 8000,
+        format: 'd-h-m-s',
+        every: (data) => {
             console.log(data);
         },
-        stop: function(data) {
-            console.log('stop');
+        stop: (data) => {
+            console.log('stop------1')
         }
-    }).start();
+    })
+
+    const aa = countDown1.start()
+
+    const countDown2 = new CountDown({
+        startTime: (new Date()).getTime(),
+        stopTime: (new Date()).getTime() + 4000,
+        format: 'd-h-m-s',
+        every: (data) => {
+            console.log(data);
+        },
+        stop: (data) => {
+            console.log('stop------2')
+        }
+    })
+
+    const bb = countDown2.start()
+
+    countDowns.push(countDown1);
+    countDowns.push(countDown2);
+
+    const id = [aa, bb]
+
+    setTimeout(() => {
+        countDowns.forEach((countDown, i) => {
+            countDown.stop(id[i])
+        })
+    }, 2000)
+
 
 //  countDown.stop();
 </script>
