@@ -49,10 +49,11 @@ var countDown = new CountDown({
     }
 }));
 
-// 手动触发时，会返回一个停止的标记id，在手动停止时使用
-var stopId = countDown.start();
+// 手动触发开始
+countDown.start();
 
 setTimeout(function() {
+    手动触发停止
 	countDown.stop(stopId);
 }, 2000);
 ```
