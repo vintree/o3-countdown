@@ -1,4 +1,4 @@
-# O2-countdown
+# O2-countdown - 0.3.0
 
 O2-countdown是一个倒计时组件，具备以下功能
 
