@@ -7,3 +7,4 @@ node_modules/
 **/*/._*
 .idea/**/*
 ./O2-countdown
+./o3-countdown

@@ -1,11 +1,11 @@
 {
   "name": "o3-countdown",
-  "version": "0.3.2",
-  "description": "O2-countdown",
+  "version": "0.3.3",
+  "description": "countdown component",
   "email": "puxiao.wh@gmail.com",
   "repository": { 
     "type" : "git", 
-    "url": "https://github.com/wuguzi/O2-countdown"    
+    "url": "https://github.com/wuguzi/o3-countdown"
   },  
   "main": "index.js",
   "scripts": {
